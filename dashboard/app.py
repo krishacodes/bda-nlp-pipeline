@@ -41,7 +41,7 @@ st.divider()
 @st.cache_data
 def load_data():
     try:
-        response = requests.get("http://127.0.0.1:8000/news")
+        response=requests.get("https://news-api-dzb9.onrender.com/news")
         data = response.json()
         return pd.DataFrame(data)
     except:
